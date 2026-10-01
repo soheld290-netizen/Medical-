@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f5f8fb;
+    color: #222;
+}
+
+/* Header */
+
+header {
+    background: #0b7285;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 420px;
+    padding: 80px 7%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(120deg, #dff6f9, #ffffff);
+}
+
+.hero h1 {
+    max-width: 650px;
+    font-size: 48px;
+    color: #075985;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 19px;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.btn,
+button {
+    display: inline-block;
+    background: #0b7285;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 7px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover,
+button:hover {
+    background: #075985;
+}
+
+/* Common */
+
+.container {
+    width: 86%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 55px 0;
+}
+
+.container > h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+/* Page Header */
+
+.page-header {
+    text-align: center;
+    padding: 65px 20px;
+    background: #e3f2fd;
+}
+
+.page-header h1 {
+    font-size: 40px;
+    color: #075985;
+}
+
+.page-header p {
+    margin-top: 10px;
+}
+
+/* Medicine Cards */
+
+.medicine-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.medicine-card {
+    background: white;
+    padding: 28px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s;
+}
+
+.medicine-card:hover {
+    transform: translateY(-5px);
+}
+
+.medicine-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.medicine-card h2,
+.medicine-card h3 {
+    color: #075985;
+    margin-bottom: 10px;
+}
+
+.medicine-card p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.medicine-card strong {
+    display: block;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+/* Features */
+
+.info-section {
+    background: white;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    text-align: center;
+}
+
+.features div {
+    padding: 25px;
+}
+
+.features span {
+    font-size: 40px;
+}
+
+/* Contact */
+
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.contact-card {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card h2 {
+    color: #075985;
+    margin-bottom: 20px;
+}
+
+.contact-card p {
+    margin-bottom: 18px;
+}
+
+form label {
+    display: block;
+    margin: 12px 0 5px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+form button {
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* Footer */
+
+footer {
+    background: #073b4c;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .medicine-grid,
+    .features,
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero {
+        padding: 60px 5%;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+}
